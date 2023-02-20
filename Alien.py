@@ -1,7 +1,7 @@
 import sys
 import pygame
-
 from Settings import Settings
+from Ship import Ship
 
 
 class AlienInvasion:
@@ -13,11 +13,14 @@ class AlienInvasion:
 
         pygame.display.set_caption("Inwazja!")
 
+        self.ship = Ship(self)
+
     def run_game(self):
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
+                self.ship.blitme()
 
             pygame.display.flip()
 
