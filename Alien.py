@@ -29,7 +29,9 @@ class AlienInvasion:
             if event.type == pygame.QUIT:
                 sys.exit()
             self.ship.blitme()
-            
+    def _update_screen(self):
+        self.ship.blitme()
+
 if __name__ == "__main__":
     ai = AlienInvasion()
     ai.run_game()
