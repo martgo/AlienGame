@@ -20,13 +20,15 @@ class AlienInvasion:
             self._check_events()
             self.ship.update()
             self._update_screen()
-            #for event in pygame.event.get():
-                #if event.type == pygame.QUIT:
-                    #sys.exit()
-                #self.ship.blitme()
+            # for event in pygame.event.get():
+            # if event.type == pygame.QUIT:
+            # sys.exit()
+            # self.ship.blitme()
 
             pygame.display.flip()
+
     def _check_events(self):
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
@@ -41,8 +43,9 @@ class AlienInvasion:
                         self.ship.moving_right = False
                     elif event.key == pygame.K_LEFT:
                         self.ship.moving_left = False
-                    self.ship.rect.x+=1
+                    self.ship.rect.x += 1
             self.ship.blitme()
+
     def _update_screen(self):
         self.ship.blitme()
 
