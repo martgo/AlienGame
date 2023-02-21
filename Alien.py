@@ -11,8 +11,8 @@ class AlienInvasion:
 
         self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
 
-        pygame.display.set_caption("Inwazja!")
-        self.bg_color = (230, 230, 230)
+        pygame.display.set_caption("Battle ship!")
+        self.bg_color = (64, 64, 64)
 
         self.ship = Ship(self)
 
