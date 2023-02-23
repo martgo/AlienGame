@@ -9,9 +9,7 @@ class AlienInvasion:
     def __init__(self):
         pygame.init()
         self.settings = Settings()
-
         self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
-
         pygame.display.set_caption("Battle ship!")
         self.bg_color = (64, 64, 64)
 
@@ -25,11 +23,6 @@ class AlienInvasion:
             self.bullets.update()
             self._update_bullets()
             self._update_screen()
-            # for event in pygame.event.get():
-            # if event.type == pygame.QUIT:
-            # sys.exit()
-            # self.ship.blitme()
-
             pygame.display.flip()
 
     def _check_events(self):
